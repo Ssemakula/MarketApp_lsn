@@ -94,7 +94,7 @@ namespace MarketApp_lsn
                 this.editToolStripButton.Enabled = false;
                 this.deleteToolStripButton.Enabled = false;
 
-                this.goods_listBindingNavigatorSaveItem.Enabled = true;
+                this.saveToolStripButton.Enabled = true;
                 this.cancelToolStripButton.Enabled = true;
                 this.exitToolStripButton.Enabled=false;
                 this.groupBox1.Enabled = true;
@@ -106,7 +106,7 @@ namespace MarketApp_lsn
                 this.editToolStripButton.Enabled = true;
                 this.deleteToolStripButton.Enabled = true;
 
-                this.goods_listBindingNavigatorSaveItem.Enabled = false;
+                this.saveToolStripButton.Enabled = false;
                 this.cancelToolStripButton.Enabled = false;
                 this.exitToolStripButton.Enabled = true;
                 this.groupBox1.Enabled = false;

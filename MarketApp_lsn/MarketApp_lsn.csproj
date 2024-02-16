@@ -58,6 +58,18 @@
     <Compile Include="Method1.Designer.cs">
       <DependentUpon>Method1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Method2\Method2Child.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Method2\Method2Child.Designer.cs">
+      <DependentUpon>Method2Child.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Method2\Method2Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Method2\Method2Main.Designer.cs">
+      <DependentUpon>Method2Main.cs</DependentUpon>
+    </Compile>
     <Compile Include="StartForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +80,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Method1.resx">
       <DependentUpon>Method1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Method2\Method2Child.resx">
+      <DependentUpon>Method2Child.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Method2\Method2Main.resx">
+      <DependentUpon>Method2Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
