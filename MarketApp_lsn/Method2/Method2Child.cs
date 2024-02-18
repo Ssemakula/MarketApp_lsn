@@ -18,17 +18,63 @@ namespace MarketApp_lsn.Method2
          * Mayhaps a different way?
          */
 
+        private int _currentRecord;
+
         public Method2Child()
         {
             InitializeComponent();
         }
 
+        public int CurrentRecord {
+            get {  return _currentRecord; } 
+            set { _currentRecord = value;}
+            }
 
         private void Method2Child_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'market.goods_list' table. You can move, or remove it, as needed.
-            this.goods_listTableAdapter.FillAll(this.market.goods_list);
+            if (this.toolStripLabel.Text == "Add Record")
+            {
+                this.goods_listBindingSource.AddNew();
+            }
+            else
+            {
+                this.goods_listTableAdapter.Fillby_ID(this.market.goods_list, _currentRecord);
+                if (this.toolStripLabel.Text == "Edit Record")
+                {
+                    //No code necessary
+                }
+                else if(this.toolStripLabel.Text == "Delete Record")
+                {
+                    this.infoGroupBox.Enabled = false;
+                }
+            }
+        }
 
+        private void SaveToolStripButton_Click(object sender, EventArgs e)
+        {
+
+            if(this.toolStripLabel.Text == "Delete Record")
+            {
+                this.goods_listBindingSource.RemoveCurrent();
+            }
+            this.Validate();
+            this.goods_listBindingSource.EndEdit();
+            // this.goods_listTableAdapter.Update(this.market.goods_list);
+            if (this.goods_listTableAdapter.Update(this.market.goods_list) == 0)
+            {
+                MessageBox.Show("Failed to update records");
+            }
+            else
+            {
+                this.DialogResult = DialogResult.OK;
+                //this.Close();
+            }
+                
+        }
+
+        private void CancelToolStripButton_Click(object sender, EventArgs e)
+        {
+            this.DialogResult= DialogResult.Cancel;
         }
     }
 }

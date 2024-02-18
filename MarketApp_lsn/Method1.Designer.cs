@@ -71,6 +71,7 @@
             this.qTYTextBox = new System.Windows.Forms.TextBox();
             this.reg_dateDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.commentTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             idLabel = new System.Windows.Forms.Label();
             goods_nameLabel = new System.Windows.Forms.Label();
             priceLabel = new System.Windows.Forms.Label();
@@ -404,6 +405,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(idLabel);
             this.groupBox1.Controls.Add(this.idTextBox);
             this.groupBox1.Controls.Add(goods_nameLabel);
@@ -472,6 +474,15 @@
             this.commentTextBox.Size = new System.Drawing.Size(372, 77);
             this.commentTextBox.TabIndex = 11;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(7, 178);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "label1";
+            // 
             // Method1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -537,5 +548,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.Label label1;
     }
 }

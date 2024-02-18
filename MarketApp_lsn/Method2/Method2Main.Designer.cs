@@ -30,33 +30,33 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Method2Main));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.market = new MarketApp_lsn.DataSets.Market();
             this.goods_listBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.goods_listTableAdapter = new MarketApp_lsn.DataSets.MarketTableAdapters.goods_listTableAdapter();
             this.tableAdapterManager = new MarketApp_lsn.DataSets.MarketTableAdapters.TableAdapterManager();
             this.goods_listBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.goods_listDataGridView = new System.Windows.Forms.DataGridView();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
+            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.newToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.editToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.deleteToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.exitToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.goods_listDataGridView = new System.Windows.Forms.DataGridView();
+            this._ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._RegDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._Comment = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.market)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goods_listBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goods_listBindingNavigator)).BeginInit();
@@ -73,6 +73,7 @@
             // 
             this.goods_listBindingSource.DataMember = "goods_list";
             this.goods_listBindingSource.DataSource = this.market;
+            this.goods_listBindingSource.Sort = "";
             // 
             // goods_listTableAdapter
             // 
@@ -116,58 +117,12 @@
             this.goods_listBindingNavigator.TabIndex = 0;
             this.goods_listBindingNavigator.Text = "bindingNavigator1";
             // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 44);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Position";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
-            // 
             // bindingNavigatorCountItem
             // 
             this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
             this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 41);
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 44);
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 44);
-            // 
-            // goods_listDataGridView
-            // 
-            this.goods_listDataGridView.AllowUserToAddRows = false;
-            this.goods_listDataGridView.AllowUserToDeleteRows = false;
-            this.goods_listDataGridView.AutoGenerateColumns = false;
-            this.goods_listDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.goods_listDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6});
-            this.goods_listDataGridView.DataSource = this.goods_listBindingSource;
-            this.goods_listDataGridView.Location = new System.Drawing.Point(12, 47);
-            this.goods_listDataGridView.Name = "goods_listDataGridView";
-            this.goods_listDataGridView.ReadOnly = true;
-            this.goods_listDataGridView.RowHeadersWidth = 25;
-            this.goods_listDataGridView.Size = new System.Drawing.Size(668, 391);
-            this.goods_listDataGridView.TabIndex = 1;
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -188,6 +143,25 @@
             this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 41);
             this.bindingNavigatorMovePreviousItem.Text = "Move previous";
             // 
+            // bindingNavigatorSeparator
+            // 
+            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 44);
+            // 
+            // bindingNavigatorPositionItem
+            // 
+            this.bindingNavigatorPositionItem.AccessibleName = "Position";
+            this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
+            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.ToolTipText = "Current position";
+            // 
+            // bindingNavigatorSeparator1
+            // 
+            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
+            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 44);
+            // 
             // bindingNavigatorMoveNextItem
             // 
             this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -205,6 +179,11 @@
             this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 41);
             this.bindingNavigatorMoveLastItem.Text = "Move last";
+            // 
+            // bindingNavigatorSeparator2
+            // 
+            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
+            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 44);
             // 
             // newToolStripButton
             // 
@@ -251,58 +230,79 @@
             this.exitToolStripButton.ToolTipText = "Exit Window";
             this.exitToolStripButton.Click += new System.EventHandler(this.ExitToolStripButton_Click);
             // 
-            // dataGridViewTextBoxColumn1
+            // goods_listDataGridView
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "id";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 50;
+            this.goods_listDataGridView.AllowUserToAddRows = false;
+            this.goods_listDataGridView.AllowUserToDeleteRows = false;
+            this.goods_listDataGridView.AutoGenerateColumns = false;
+            this.goods_listDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.goods_listDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this._ID,
+            this._Name,
+            this._Quantity,
+            this._Price,
+            this._RegDate,
+            this._Comment});
+            this.goods_listDataGridView.DataSource = this.goods_listBindingSource;
+            this.goods_listDataGridView.Location = new System.Drawing.Point(12, 47);
+            this.goods_listDataGridView.Name = "goods_listDataGridView";
+            this.goods_listDataGridView.ReadOnly = true;
+            this.goods_listDataGridView.RowHeadersWidth = 25;
+            this.goods_listDataGridView.Size = new System.Drawing.Size(668, 391);
+            this.goods_listDataGridView.TabIndex = 1;
             // 
-            // dataGridViewTextBoxColumn2
+            // _ID
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "goods_name";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Name";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 150;
+            this._ID.DataPropertyName = "id";
+            this._ID.HeaderText = "ID";
+            this._ID.Name = "_ID";
+            this._ID.ReadOnly = true;
+            this._ID.Width = 50;
             // 
-            // dataGridViewTextBoxColumn4
+            // _Name
             // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "QTY";
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle15.Format = "N0";
-            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle15;
-            this.dataGridViewTextBoxColumn4.HeaderText = "Quantity";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 75;
+            this._Name.DataPropertyName = "goods_name";
+            this._Name.HeaderText = "Name";
+            this._Name.Name = "_Name";
+            this._Name.ReadOnly = true;
+            this._Name.Width = 150;
             // 
-            // dataGridViewTextBoxColumn3
+            // _Quantity
             // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "price";
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle16.Format = "N2";
-            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle16;
-            this.dataGridViewTextBoxColumn3.HeaderText = "Price";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 75;
+            this._Quantity.DataPropertyName = "QTY";
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle9.Format = "N0";
+            this._Quantity.DefaultCellStyle = dataGridViewCellStyle9;
+            this._Quantity.HeaderText = "Quantity";
+            this._Quantity.Name = "_Quantity";
+            this._Quantity.ReadOnly = true;
+            this._Quantity.Width = 75;
             // 
-            // dataGridViewTextBoxColumn5
+            // _Price
             // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "reg_date";
-            this.dataGridViewTextBoxColumn5.HeaderText = "Reg Date";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this._Price.DataPropertyName = "price";
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle10.Format = "N2";
+            this._Price.DefaultCellStyle = dataGridViewCellStyle10;
+            this._Price.HeaderText = "Price";
+            this._Price.Name = "_Price";
+            this._Price.ReadOnly = true;
+            this._Price.Width = 75;
             // 
-            // dataGridViewTextBoxColumn6
+            // _RegDate
             // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "comment";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Comment";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Width = 150;
+            this._RegDate.DataPropertyName = "reg_date";
+            this._RegDate.HeaderText = "Reg Date";
+            this._RegDate.Name = "_RegDate";
+            this._RegDate.ReadOnly = true;
+            // 
+            // _Comment
+            // 
+            this._Comment.DataPropertyName = "comment";
+            this._Comment.HeaderText = "Comment";
+            this._Comment.Name = "_Comment";
+            this._Comment.ReadOnly = true;
+            this._Comment.Width = 150;
             // 
             // Method2Main
             // 
@@ -310,6 +310,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(688, 450);
+            this.ControlBox = false;
             this.Controls.Add(this.goods_listDataGridView);
             this.Controls.Add(this.goods_listBindingNavigator);
             this.Name = "Method2Main";
@@ -347,11 +348,11 @@
         private System.Windows.Forms.ToolStripButton editToolStripButton;
         private System.Windows.Forms.ToolStripButton deleteToolStripButton;
         private System.Windows.Forms.ToolStripButton exitToolStripButton;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _Quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _Price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _RegDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _Comment;
     }
 }
