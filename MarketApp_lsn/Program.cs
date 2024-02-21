@@ -16,7 +16,7 @@ namespace MarketApp_lsn
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Method2.Method2Main());
+            Application.Run(new StartForm());
         }
     }
 }

@@ -36,13 +36,18 @@ namespace MarketApp_lsn
 
         private void goods_listBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
-            this.Validate();
-            this.goods_listBindingSource.EndEdit();
-            // this.goods_listTableAdapter.Update(this.market.goods_list);
-            if(this.goods_listTableAdapter.Update(this.market.goods_list) == 0)
+            try
             {
-                MessageBox.Show("Failed to update records");
+                this.Validate();
+                this.goods_listBindingSource.EndEdit();
+                // this.goods_listTableAdapter.Update(this.market.goods_list);
+                if (this.goods_listTableAdapter.Update(this.market.goods_list) == 0)
+                {
+                    MessageBox.Show("Failed to update records");
+                }
             }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            
             ButtonController(false);
             BindingNav_Control(false);
         }
@@ -51,7 +56,15 @@ namespace MarketApp_lsn
         {
             ButtonController(false);
             // TODO: This line of code loads data into the 'market.goods_list' table. You can move, or remove it, as needed.
-            this.goods_listTableAdapter.FillAll(this.market.goods_list);
+            try
+            {
+                this.goods_listTableAdapter.FillAll(this.market.goods_list);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
             this.groupBox1.Enabled = false;
         }
 
@@ -148,8 +161,12 @@ namespace MarketApp_lsn
         {
             ButtonController(false);
             BindingNav_Control(false);
-            this.goods_listBindingSource.CancelEdit();
-            this.market.goods_list.RejectChanges();
+            try
+            {
+                this.goods_listBindingSource.CancelEdit();
+                this.market.goods_list.RejectChanges();
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
         private void ExitToolStripButton_Click(object sender, EventArgs e)

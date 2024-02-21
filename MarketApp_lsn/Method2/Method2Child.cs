@@ -38,7 +38,11 @@ namespace MarketApp_lsn.Method2
             }
             else
             {
-                this.goods_listTableAdapter.Fillby_ID(this.market.goods_list, _currentRecord);
+                try
+                {
+                    this.goods_listTableAdapter.Fillby_ID(this.market.goods_list, _currentRecord);
+                }
+                catch (Exception ex) { MessageBox.Show(ex.Message); }
                 if (this.toolStripLabel.Text == "Edit Record")
                 {
                     //No code necessary
@@ -52,24 +56,27 @@ namespace MarketApp_lsn.Method2
 
         private void SaveToolStripButton_Click(object sender, EventArgs e)
         {
+            try
+            {
+                this.Validate();
+                this.goods_listBindingSource.EndEdit();
+                // this.goods_listTableAdapter.Update(this.market.goods_list);
+                 if (this.toolStripLabel.Text == "Delete Record")
+                {
+                    this.goods_listBindingSource.RemoveCurrent();
+                }
 
-            if(this.toolStripLabel.Text == "Delete Record")
-            {
-                this.goods_listBindingSource.RemoveCurrent();
+               if (this.goods_listTableAdapter.Update(this.market.goods_list) == 0)
+                {
+                    MessageBox.Show("Failed to update records");
+                }
+                else
+                {
+                    this.DialogResult = DialogResult.OK;
+                    //this.Close();
+                }
             }
-            this.Validate();
-            this.goods_listBindingSource.EndEdit();
-            // this.goods_listTableAdapter.Update(this.market.goods_list);
-            if (this.goods_listTableAdapter.Update(this.market.goods_list) == 0)
-            {
-                MessageBox.Show("Failed to update records");
-            }
-            else
-            {
-                this.DialogResult = DialogResult.OK;
-                //this.Close();
-            }
-                
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
         }
 
         private void CancelToolStripButton_Click(object sender, EventArgs e)
